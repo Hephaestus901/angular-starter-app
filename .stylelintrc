@@ -1,0 +1,12 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": [
+        "stylelint-selector-no-empty",
+        "stylelint-no-unused-selectors"
+    ],
+    "rules": {
+        "plugin/stylelint-selector-no-empty": true,
+        "plugin/no-unused-selectors": true,
+        "no-empty-source": null
+    }
+}
