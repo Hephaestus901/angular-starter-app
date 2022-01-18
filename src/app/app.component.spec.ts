@@ -4,7 +4,8 @@ import { AppComponent } from "./app.component";
 describe("appComponent", () => {
     const initialSetup = async () => {
         await TestBed.configureTestingModule({
-            declarations: [AppComponent]
+            declarations: [AppComponent],
+            teardown: { destroyAfterEach: false }
         }).compileComponents();
     };
 
@@ -21,7 +22,7 @@ describe("appComponent", () => {
         await initialSetup();
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
-        expect(app.title).toStrictEqual("angular-panel");
+        expect(app.title).toBe("angular-panel");
     });
 
     it("should render title", async () => {
